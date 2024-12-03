@@ -22,3 +22,13 @@ target_link_libraries(${PROJECT_NAME} PRIVATE sil)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin2/${CMAKE_BUILD_TYPE})
+
+    include(FetchContent)
+    FetchContent_Declare(
+        terminal_ctrl
+        GIT_REPOSITORY https://github.com/dsmtE/terminal_ctrl
+        GIT_TAG "origin/main"
+    )
+    
+    FetchContent_MakeAvailable(terminal_ctrl)
+    target_link_libraries(${PROJECT_NAME} PUBLIC terminal_ctrl)

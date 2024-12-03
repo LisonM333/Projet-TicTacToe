@@ -9,5 +9,6 @@ namespace Player
     };
 
     player create_player ();
+    player create_AI(char sym_joueur);
 }
 

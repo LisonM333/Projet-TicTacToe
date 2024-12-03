@@ -10,6 +10,16 @@ int main ()
     std::cout << "2. Un joueur contre l'IA";
     int mode_de_jeu{};
     std::cin >> mode_de_jeu;
-    Board::Partie();
+    switch (mode_de_jeu)
+    {
+        case 1 :
+            Board::Partie_JxJ();
+            break;
+        case 2 :
+            Board::Partie_JxAI();
+            break;
+        default :
+            break;
+    }
     return 0;
 }
