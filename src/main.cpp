@@ -1,5 +1,5 @@
 #include <iostream>
-#include "header.hpp"
+#include "Board.hpp"
 #include "Player.hpp"
 
 int main ()

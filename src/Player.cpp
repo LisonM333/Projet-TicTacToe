@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Player.hpp"
 
 struct player {
     std::string name {};
@@ -18,7 +19,7 @@ player create_player()
 player create_AI(char sym_joueur)
 {
     player AI{};
-    AI.name = 'AI';
+    AI.name = "AI";
     if (sym_joueur!='O' && sym_joueur!='0' && sym_joueur!='o')
     {
         AI.symbole = 'O';
@@ -27,4 +28,5 @@ player create_AI(char sym_joueur)
     {
         AI.symbole = 'X';
     }
+    return AI;
 }
