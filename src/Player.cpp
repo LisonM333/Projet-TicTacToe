@@ -1,24 +1,19 @@
 #include <iostream>
 #include "Player.hpp"
 
-struct player {
-    std::string name {};
-    char symbole {}; //X ou O
-};
-
-player create_player()
+Player create_player()
 {
-    player Joueur{};
+    Player Joueur{};
     std::cout << "Quels est le nom du joueur ? ";
     std::cin >> Joueur.name;
-    std::cout << "Choisissez un symbole (de préférence entre X et O) : ";
+    std::cout << "Choisissez un symbole (de preference entre X et O) : ";
     std::cin >> Joueur.symbole;
     return Joueur;
 }
 
-player create_AI(char sym_joueur)
+Player create_AI(char sym_joueur)
 {
-    player AI{};
+    Player AI{};
     AI.name = "AI";
     if (sym_joueur!='O' && sym_joueur!='0' && sym_joueur!='o')
     {

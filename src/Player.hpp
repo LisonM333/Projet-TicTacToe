@@ -1,14 +1,12 @@
 #pragma once
 #include <iostream>
 
-namespace Player
-{
-    struct player {
-        std::string name {};
-        char symbole {}; //X ou O
-    };
+struct Player {
+    std::string name {};
+    char symbole {}; //X ou O
+};
 
-    player create_player ();
-    player create_AI(char sym_joueur);
-}
+Player create_player ();
+Player create_AI(char sym_joueur);
+
 
